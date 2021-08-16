@@ -1,0 +1,12 @@
+CREATE TABLE `base`(
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `picture` VARCHAR(255) NOT NULL, 
+    `title` VARCHAR(100) NOT NULL,
+    `description` VARCHAR(255) NOT NULL,
+    `url` VARCHAR(255) NOT NULL,
+    `owner` VARCHAR(255) NOT NULL,
+    `created_at` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP NULL DEFAULT NULL,
+    PRIMARY KEY (`id`),
+    UNIQUE KEY (`url`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
